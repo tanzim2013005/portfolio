@@ -1,0 +1,1188 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Md. Tanzim Shahriar | Materials Science & Energy Research Portfolio</title>
+  
+  <!-- Modern Academic Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            body: ['"Inter"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            brand: {
+              50: '#f0fdf4',
+              100: '#dcfce7',
+              500: '#10b981',
+              600: '#059669',
+              700: '#047857',
+            },
+            accent: {
+              50: '#eff6ff',
+              500: '#3b82f6',
+              600: '#2563eb',
+              700: '#1d4ed8',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Custom Smooth Scrollbar */
+    ::-webkit-scrollbar { width: 7px; height: 7px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 9999px; }
+    .dark ::-webkit-scrollbar-thumb { background: #334155; }
+    ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+    .dark ::-webkit-scrollbar-thumb:hover { background: #475569; }
+    
+    /* Subtle Academic Background Grid Pattern */
+    .bg-grid-pattern {
+      background-image: radial-gradient(rgba(100, 116, 139, 0.12) 1px, transparent 1px);
+      background-size: 28px 28px;
+    }
+    .dark .bg-grid-pattern {
+      background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+      background-size: 28px 28px;
+    }
+    
+    /* Bento Grid Card Hover & Smooth Elevation */
+    .bento-card {
+      transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.22s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.22s ease;
+    }
+    .bento-card:hover {
+      transform: translateY(-3px);
+    }
+    
+    /* Glassmorphism */
+    .glass-nav {
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+    
+    /* Print Optimization for Faculty */
+    @media print {
+      body { background: white !important; color: black !important; }
+      .no-print { display: none !important; }
+      .bento-card { break-inside: avoid; border: 1px solid #cbd5e1 !important; box-shadow: none !important; }
+    }
+  </style>
+</head>
+<body class="bg-[#f8fafc] text-slate-900 dark:bg-[#07090e] dark:text-slate-100 transition-colors duration-300 font-sans antialiased min-h-screen bg-grid-pattern selection:bg-blue-500/20 selection:text-blue-600">
+
+  <!-- Ambient Light Effects & Academic Glow Orbs -->
+  <div class="fixed inset-0 overflow-hidden pointer-events-none -z-10 no-print">
+    <div class="absolute -top-48 left-1/2 -translate-x-1/2 w-[950px] h-[500px] bg-gradient-to-b from-blue-500/15 via-indigo-500/10 to-transparent dark:from-blue-600/20 dark:via-indigo-600/15 blur-[140px] rounded-full"></div>
+    <div class="absolute top-[32%] -right-28 w-[550px] h-[450px] bg-emerald-500/10 dark:bg-emerald-600/12 blur-[150px] rounded-full"></div>
+    <div class="absolute top-[65%] -left-28 w-[550px] h-[450px] bg-purple-500/10 dark:bg-purple-600/12 blur-[150px] rounded-full"></div>
+  </div>
+
+  <!-- NAVIGATION BAR -->
+  <header class="sticky top-0 z-40 glass-nav bg-white/85 dark:bg-[#07090e]/90 border-b border-slate-200/80 dark:border-slate-800/80 transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-6 sm:gap-10">
+      
+      <!-- Identity -->
+      <a href="#" class="flex items-center space-x-3 group shrink-0">
+        <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-blue-600 via-indigo-600 to-emerald-500 flex items-center justify-center text-white font-extrabold text-sm shadow-md shadow-blue-500/20 group-hover:scale-105 transition-transform">
+          TS
+        </div>
+        <div>
+          <span class="font-bold text-sm tracking-tight text-slate-900 dark:text-white block group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+            Md. Tanzim Shahriar
+          </span>
+          <span class="text-[11px] text-slate-500 dark:text-slate-400 block -mt-0.5 font-mono">
+            Research Portfolio
+          </span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="hidden lg:flex items-center space-x-6 xl:space-x-8 text-xs font-semibold text-slate-600 dark:text-slate-300 ml-auto mr-4">
+        <a href="#background" class="hover:text-blue-600 dark:hover:text-blue-400 transition">Research Background</a>
+        <a href="#gallery" class="hover:text-blue-600 dark:hover:text-blue-400 transition">Figure Gallery (1–16)</a>
+        <a href="#assistantships" class="hover:text-blue-600 dark:hover:text-blue-400 transition">Assistantships</a>
+        <a href="#publications" class="hover:text-blue-600 dark:hover:text-blue-400 transition">Publications & Ongoing</a>
+        <a href="#skills" class="hover:text-blue-600 dark:hover:text-blue-400 transition">Methodologies</a>
+      </nav>
+
+      <!-- Action Buttons -->
+      <div class="flex items-center space-x-2.5 shrink-0">
+        <a href="https://drive.google.com/file/d/1QBOVc2EvcgCP4h8VunkwVVhD7YTy0LZK/view?usp=sharing" target="_blank" class="inline-flex items-center space-x-1.5 px-3 py-1.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white/80 dark:bg-slate-800/80 hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-800 dark:text-slate-100 font-semibold text-xs shadow-sm transition" title="View & Download CV">
+          <svg class="w-3.5 h-3.5 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+          <span>Curriculum Vitae</span>
+        </a>
+
+        <button id="theme-toggle" class="w-9 h-9 flex items-center justify-center rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition" title="Toggle Light/Dark Theme">
+          <svg id="theme-icon-sun" class="w-4 h-4 hidden dark:block text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 9h-1m15.364-6.364l-.707.707M6.343 17.657l-.707.707m12.728 0l-.707-.707M6.343 6.343l-.707-.707M12 8a4 4 0 100 8 4 4 0 000-8z"/></svg>
+          <svg id="theme-icon-moon" class="w-4 h-4 block dark:hidden text-slate-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+        </button>
+
+        <a href="mailto:2013005@student.ruet.ac.bd" class="inline-flex items-center space-x-1.5 px-3.5 py-1.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white dark:bg-blue-600 dark:hover:bg-blue-500 font-semibold text-xs shadow-sm transition">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          <span class="hidden sm:inline">Get in Touch</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ACADEMIC CV HEADER & PROFILE HERO -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-4">
+    <div class="bento-card p-6 sm:p-8 rounded-3xl bg-white/95 dark:bg-[#0f1422]/95 border border-slate-200/90 dark:border-slate-800 shadow-sm relative overflow-hidden">
+      
+      <div class="flex flex-col md:flex-row items-center md:items-start gap-6 sm:gap-8">
+        
+        <!-- Profile Photo Container -->
+        <div class="relative group shrink-0">
+          <div class="w-32 h-32 sm:w-36 sm:h-36 rounded-2xl overflow-hidden bg-gradient-to-br from-slate-100 to-slate-200 dark:from-slate-800 dark:to-slate-900 border-2 border-slate-200 dark:border-slate-700 shadow-md flex items-center justify-center cursor-pointer transition-all duration-300 group-hover:border-blue-500" title="Md. Tanzim Shahriar">
+            <img id="profile-display-img" src="Images/profile image.jpg" class="w-full h-full object-cover" alt="Md. Tanzim Shahriar" onload="this.classList.remove('hidden'); document.getElementById('profile-placeholder').classList.add('hidden');" onerror="handleImgError(this)" />
+            <div id="profile-placeholder" class="flex flex-col items-center justify-center p-3 text-center">
+              <div class="w-10 h-10 rounded-full bg-blue-50 dark:bg-blue-900/40 text-blue-600 dark:text-blue-400 flex items-center justify-center text-lg mb-1.5 shadow-sm">
+                👤
+              </div>
+              <span class="text-[11px] font-semibold text-slate-700 dark:text-slate-300">Add Photo</span>
+              
+            </div>
+          </div>
+          <!-- Hidden File Input for Avatar -->
+          
+          
+          <div class="absolute -bottom-1 -right-1 w-7 h-7 rounded-full bg-emerald-500 border-2 border-white dark:border-[#0f1422] flex items-center justify-center shadow-md" title="Materials Science Researcher (RUET)">
+            <svg class="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+          </div>
+        </div>
+
+        <!-- CV Header Details (Modeled directly after Tanzim's CV Header) -->
+        <div class="flex-1 text-center md:text-left">
+          
+          <!-- Name in Formal CV Typography -->
+          <h1 class="text-3xl sm:text-4xl lg:text-[42px] font-extrabold tracking-tight text-slate-900 dark:text-white uppercase font-sans">
+            MD. TANZIM SHAHRIAR
+          </h1>
+
+          <!-- Contact Row with Exact CV Data -->
+          <div class="mt-3 flex flex-wrap items-center justify-center md:justify-start gap-x-5 gap-y-2 text-xs sm:text-[13px] text-slate-600 dark:text-slate-300 font-body">
+            <span class="inline-flex items-center space-x-1.5">
+              <span>📍</span>
+              <span>Rajshahi, Bangladesh</span>
+            </span>
+            <span class="inline-flex items-center space-x-1.5 font-mono text-xs">
+              <span>✉️</span>
+              <a href="mailto:2013005@student.ruet.ac.bd" class="text-blue-600 dark:text-blue-400 hover:underline">2013005@student.ruet.ac.bd</a>
+            </span>
+
+            <span class="inline-flex items-center space-x-1.5 font-mono text-xs">
+              <span>📞</span>
+              <a href="tel:+8801788257301" class="text-slate-700 dark:text-slate-300 hover:text-blue-500">+8801788257301</a>
+            </span>
+          </div>
+
+          <!-- Academic Profiles Row -->
+          <div class="mt-3.5 flex flex-wrap items-center justify-center md:justify-start gap-2.5 text-xs font-semibold">
+            <a href="https://drive.google.com/file/d/1QBOVc2EvcgCP4h8VunkwVVhD7YTy0LZK/view?usp=sharing" target="_blank" class="inline-flex items-center space-x-1.5 px-3.5 py-1 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white font-semibold shadow-sm transition" title="Download Tanzim's CV (PDF)">
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+              <span>Download CV (PDF)</span>
+            </a>
+            <span class="text-slate-300 dark:text-slate-700 hidden sm:inline">•</span>
+
+            <a href="https://scholar.google.com/citations?user=Ii-cvMsAAAAJ&hl=en" target="_blank" class="inline-flex items-center space-x-1.5 px-3 py-1 rounded-lg bg-blue-50 dark:bg-blue-950/60 border border-blue-200 dark:border-blue-800/80 text-blue-700 dark:text-blue-300 hover:bg-blue-100 dark:hover:bg-blue-900/80 transition">
+              <span>🎓 Google Scholar</span>
+            </a>
+            <span class="text-slate-300 dark:text-slate-700 hidden sm:inline">•</span>
+            <a href="https://www.linkedin.com/in/tanzim-shahriar-3837111ab/" target="_blank" class="inline-flex items-center space-x-1.5 px-3 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition">
+              <span>💼 LinkedIn</span>
+            </a>
+            <span class="text-slate-300 dark:text-slate-700 hidden sm:inline">•</span>
+            <a href="https://www.researchgate.net/profile/Tanzim-Shahriar?ev=prf_overview" target="_blank" class="inline-flex items-center space-x-1.5 px-3 py-1 rounded-lg bg-emerald-50 dark:bg-emerald-950/60 border border-emerald-200 dark:border-emerald-800/80 text-emerald-700 dark:text-emerald-300 hover:bg-emerald-100 dark:hover:bg-emerald-900/80 transition">
+              <span>🔬 ResearchGate</span>
+            </a>
+          </div>
+
+          <!-- Core Research Title Banner -->
+          <div class="mt-5 pt-4 border-t border-slate-100 dark:border-slate-800/80">
+            <h2 class="text-base sm:text-lg font-bold text-slate-800 dark:text-slate-200 tracking-tight">
+              Engineering Next-Generation <span class="bg-gradient-to-r from-blue-600 via-indigo-600 to-emerald-500 bg-clip-text text-transparent">Battery Cathodes</span> & Functional Nanocomposites
+            </h2>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- My Research Background (3 Core Pillars) -->
+  <section id="background" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div class="mb-6">
+      <div class="flex items-center space-x-2 text-xs font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400 font-mono mb-1.5">
+        <span>Core Expertise</span>
+      </div>
+      <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+        My Research Background
+      </h2>
+      <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-1">
+        Focused investigation spanning cobalt-free battery cathodes, multifunctional polymer nanocomposites, and rigorous materials diagnostics.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-5 sm:gap-6">
+      
+      <!-- Point 1: Battery Materials & Cell Engineering -->
+      <div class="bento-card p-5 sm:p-6 rounded-2xl bg-white/95 dark:bg-[#0f1422]/95 border border-slate-200/90 dark:border-slate-800 shadow-sm flex flex-col justify-between hover:border-blue-500/50 transition-colors">
+        <div>
+          <div class="flex items-center justify-between mb-3.5">
+            <span class="w-8 h-8 rounded-lg bg-blue-50 dark:bg-blue-900/40 text-blue-600 dark:text-blue-400 flex items-center justify-center font-extrabold text-xs font-mono">
+              01
+            </span>
+            <span class="px-2.5 py-0.5 rounded-md bg-blue-50/70 dark:bg-blue-950/50 text-blue-600 dark:text-blue-400 text-[11px] font-mono font-semibold">
+              Energy Storage &amp; Batteries
+            </span>
+          </div>
+          <h3 class="font-bold text-base text-slate-900 dark:text-white tracking-tight">
+            Advanced Battery Materials &amp; Cell Architecture
+          </h3>
+          <p class="mt-2.5 text-xs text-slate-600 dark:text-slate-300 leading-relaxed font-body">
+            Examined relationships among dopant concentration, crystal structure, phase evolution, charge-transfer behavior, and electrochemical performance in sol–gel-derived, cobalt-free <strong>LiNiO₂ cathodes</strong>.
+          </p>
+
+          <!-- Key Highlights Bulleted -->
+          <ul class="mt-3.5 space-y-2 text-xs text-slate-600 dark:text-slate-300 font-body">
+            <li class="flex items-start gap-2">
+              <span class="text-blue-500 font-bold shrink-0">•</span>
+              <span><strong>Cathode &amp; Lattice Modification:</strong> Engineered synergistic Mg²⁺/Al³⁺ co-doping to suppress Li⁺/Ni²⁺ cation mixing, relieve lattice microstrain, and mitigate H2→H3 phase distortion.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-500 font-bold shrink-0">•</span>
+              <span><strong>Electrode &amp; Device Fabrication:</strong> Synthesized and coated both cathode and graphite-anode slurries, fabricating and evaluating both <strong>coin and pouch cells</strong> for rechargeable energy storage.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-500 font-bold shrink-0">•</span>
+              <span><strong>Interfacial Charge Kinetics:</strong> Analyzed multi-cycle cyclic polarization and EIS equivalent-circuit modeling (R<sub>s</sub>, R<sub>ct</sub>, CPE, W; ZSimpWin) to deconvolute charge transfer and Li⁺ diffusion.</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="mt-5 pt-3.5 border-t border-slate-100 dark:border-slate-800/80 flex flex-wrap gap-1.5 text-[10px] font-mono text-slate-500 dark:text-slate-400">
+          <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800/60">LiNiO₂ Cathodes</span>
+          <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800/60">Coin &amp; Pouch Cells</span>
+          <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800/60">EIS &amp; CV Kinetics</span>
+        </div>
+      </div>
+
+      <!-- Point 2: Functional Polymer Nanocomposites -->
+      <div class="bento-card p-5 sm:p-6 rounded-2xl bg-white/95 dark:bg-[#0f1422]/95 border border-slate-200/90 dark:border-slate-800 shadow-sm flex flex-col justify-between hover:border-purple-500/50 transition-colors">
+        <div>
+          <div class="flex items-center justify-between mb-3.5">
+            <span class="w-8 h-8 rounded-lg bg-purple-50 dark:bg-purple-900/40 text-purple-600 dark:text-purple-400 flex items-center justify-center font-extrabold text-xs font-mono">
+              02
+            </span>
+            <span class="px-2.5 py-0.5 rounded-md bg-purple-50/70 dark:bg-purple-950/50 text-purple-600 dark:text-purple-400 text-[11px] font-mono font-semibold">
+              Smart Materials &amp; Polymers
+            </span>
+          </div>
+          <h3 class="font-bold text-base text-slate-900 dark:text-white tracking-tight">
+            Multifunctional Polymer Nanocomposites
+          </h3>
+          <p class="mt-2.5 text-xs text-slate-600 dark:text-slate-300 leading-relaxed font-body">
+            Synthesized electroactive oxide nanoparticles (<strong>BaTiO₃</strong>, <strong>BaFe₁₂O₁₉</strong>, and <strong>Bi₄Ti₃O₁₂</strong>) and reinforced them into flexible <strong>PMMA and PVDF</strong> polymer matrices via controlled solution casting.
+          </p>
+
+          <!-- Key Highlights Bulleted -->
+          <ul class="mt-3.5 space-y-2 text-xs text-slate-600 dark:text-slate-300 font-body">
+            <li class="flex items-start gap-2">
+              <span class="text-purple-500 font-bold shrink-0">•</span>
+              <span><strong>Nanoparticle Synthesis:</strong> Solid-state calcination (800 °C) and sol-gel complexation routes.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-purple-500 font-bold shrink-0">•</span>
+              <span><strong>Dielectric &amp; Piezo Response:</strong> Evaluated MWS interfacial polarization (high ε' ≈ 10.26, tanδ = 0.08) and piezoelectric d₃₃ up to 40 pC/N.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-purple-500 font-bold shrink-0">•</span>
+              <span><strong>Environmental Remediation:</strong> Achieved 67.2% photocatalytic degradation of Methylene Blue under UV-Vis irradiation.</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="mt-5 pt-3.5 border-t border-slate-100 dark:border-slate-800/80 flex flex-wrap gap-1.5 text-[10px] font-mono text-slate-500 dark:text-slate-400">
+          <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800/60">BFO &amp; BTO / PMMA</span>
+          <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800/60">Piezoelectric d₃₃</span>
+          <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800/60">Dielectric &amp; Photocatalysis</span>
+        </div>
+      </div>
+
+      <!-- Point 3: Advanced Characterization & Diagnostics -->
+      <div class="bento-card p-5 sm:p-6 rounded-2xl bg-white/95 dark:bg-[#0f1422]/95 border border-slate-200/90 dark:border-slate-800 shadow-sm flex flex-col justify-between hover:border-teal-500/50 transition-colors">
+        <div>
+          <div class="flex items-center justify-between mb-3.5">
+            <span class="w-8 h-8 rounded-lg bg-teal-50 dark:bg-teal-900/40 text-teal-600 dark:text-teal-400 flex items-center justify-center font-extrabold text-xs font-mono">
+              03
+            </span>
+            <span class="px-2.5 py-0.5 rounded-md bg-teal-50/70 dark:bg-teal-950/50 text-teal-600 dark:text-teal-400 text-[11px] font-mono font-semibold">
+              Materials Diagnostics
+            </span>
+          </div>
+          <h3 class="font-bold text-base text-slate-900 dark:text-white tracking-tight">
+            Comprehensive Materials Diagnostics
+          </h3>
+          <p class="mt-2.5 text-xs text-slate-600 dark:text-slate-300 leading-relaxed font-body">
+            Applied multi-technique characterization to resolve crystal structure, nanoscale surface morphology, electronic transitions, and pyrolytic decomposition kinetics.
+          </p>
+
+          <!-- Key Highlights Bulleted -->
+          <ul class="mt-3.5 space-y-2 text-xs text-slate-600 dark:text-slate-300 font-body">
+            <li class="flex items-start gap-2">
+              <span class="text-teal-500 font-bold shrink-0">•</span>
+              <span><strong>Structural &amp; Morphology:</strong> XRD Williamson–Hall microstrain/crystallite sizing; FE-SEM (100,000×) + ImageJ particle size distributions; EDS mapping.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-teal-500 font-bold shrink-0">•</span>
+              <span><strong>Bonding &amp; Optics:</strong> ATR-FTIR metal–oxygen vibrational modes (Ni–O, Fe–O, Ba–O); UV–Vis DRS &amp; Tauc optical bandgap determination.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-teal-500 font-bold shrink-0">•</span>
+              <span><strong>Thermal Analysis:</strong> Simultaneous TGA/DTA/DTG pyrolytic mass-loss and phase evolution analysis up to 800 °C.</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="mt-5 pt-3.5 border-t border-slate-100 dark:border-slate-800/80 flex flex-wrap gap-1.5 text-[10px] font-mono text-slate-500 dark:text-slate-400">
+          <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800/60">Williamson–Hall XRD</span>
+          <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800/60">FE-SEM / EDS</span>
+          <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800/60">FTIR / UV-Vis / TGA</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- EXPERIMENTAL GALLERY (STRUCTURE & MORPHOLOGY -> ELECTROCHEMICAL & FUNCTIONAL -> SYNTHESIS) -->
+  <section id="gallery" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-14 border-t border-slate-200 dark:border-slate-800">
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 pb-4 border-b border-slate-200 dark:border-slate-800 gap-4">
+      <div>
+        <div class="flex items-center space-x-2 text-xs font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400 font-mono mb-1.5">
+          <span>Evidence-Based Visual Catalog</span>
+        </div>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+          Experimental Highlights & Visual Gallery
+        </h2>
+        <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-1">
+          Representative experimental data documenting structural diagnostics, electrochemical & functional characterization, and synthesis protocols.
+        </p>
+      </div>
+
+      <!-- Filter Controls -->
+      <div class="flex flex-wrap gap-1.5 text-xs font-semibold">
+        <button onclick="filterGallery('all')" class="g-filter-btn active px-3 py-1.5 rounded-lg bg-blue-600 text-white shadow-sm" data-gfilter="all">All Figures (1–16)</button>
+        <button onclick="filterGallery('structure')" class="g-filter-btn px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400" data-gfilter="structure">Structure & Morphology</button>
+        <button onclick="filterGallery('electrochem')" class="g-filter-btn px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400" data-gfilter="electrochem">Electrochemical & Functional</button>
+        <button onclick="filterGallery('synthesis')" class="g-filter-btn px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400" data-gfilter="synthesis">Synthesis & Prototyping</button>
+      </div>
+    </div>
+
+    <!-- Batch Loader Bar -->
+    <div class="mb-8 px-4 py-2.5 rounded-xl bg-slate-100/70 dark:bg-slate-800/40 border border-slate-200 dark:border-slate-800 flex items-center justify-between text-xs text-slate-500 dark:text-slate-400 no-print">
+      <span class="inline-flex items-center gap-2">
+        <span>🔍</span>
+        <span>Click on any figure card below to inspect high-resolution microscopy micrographs, diffraction profiles, and electrochemical curves in full-screen lightbox.</span>
+      </span>
+      <span class="text-[11px] font-mono font-semibold text-blue-600 dark:text-blue-400 hidden sm:inline">16 High-Res Figures</span>
+    </div>
+
+    <!-- SECTION 1: STRUCTURE & MORPHOLOGY -->
+    <div class="gallery-category-group mb-12" data-group="structure">
+      <div class="flex items-center space-x-3 mb-4">
+        <div class="w-2.5 h-2.5 rounded-full bg-cyan-500"></div>
+        <h3 class="text-lg font-bold text-slate-900 dark:text-white tracking-tight">1. Structure & Morphology Diagnostics</h3>
+        <span class="text-xs font-mono text-slate-400 dark:text-slate-500">(Figures 1–6)</span>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+
+        <!-- Figure 1: XRD -->
+        <div class="bento-card g-item rounded-2xl bg-white/90 dark:bg-[#0f1422]/90 border border-slate-200 dark:border-slate-800 p-5 shadow-sm hover:shadow-xl dark:shadow-none flex flex-col justify-between" data-category="structure">
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="px-2.5 py-0.5 rounded-md bg-cyan-50 dark:bg-cyan-950/50 text-cyan-600 dark:text-cyan-400 font-bold text-[11px] font-mono uppercase">Figure 1 • XRD Profiling</span>
+              <span class="text-[11px] text-slate-400 font-mono">Phase & Microstrain</span>
+            </div>
+            <h4 class="text-base font-bold text-slate-900 dark:text-white">X-Ray Diffraction (XRD) & Lattice Refinement</h4>
+            <p class="text-xs text-slate-600 dark:text-slate-400 mt-1 font-body">Conducted phase identification, lattice parameter determination, and Williamson-Hall microstrain modeling to evaluate crystal structure and phase retention.</p>
+          </div>
+          <div class="mt-4 relative rounded-xl overflow-hidden bg-slate-100 dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 min-h-[220px] flex items-center justify-center cursor-pointer" onclick="handleCardClick('fig-1')">
+            <img id="fig-1" src="Images/figure 1.jpg" class="w-full h-full object-contain max-h-[280px] hover:scale-[1.02] transition-transform duration-300" alt="Figure 1: XRD Patterns" onload="this.classList.remove('hidden'); if(this.nextElementSibling) this.nextElementSibling.classList.add('hidden');" onerror="handleImgError(this)" />
+            <div class="placeholder hidden flex flex-col items-center justify-center p-6 text-center text-slate-400 dark:text-slate-500">
+              <span class="text-xs font-semibold text-slate-700 dark:text-slate-300">Figure 1: XRD Spectra & Peak Profiling</span>
+              <span class="text-[10px] text-slate-400 mt-1">Click to inspect full figure</span>
+            </div>
+            </div>
+        </div>
+
+        <!-- Figure 2: FE-SEM & PSD -->
+        <div class="bento-card g-item rounded-2xl bg-white/90 dark:bg-[#0f1422]/90 border border-slate-200 dark:border-slate-800 p-5 shadow-sm hover:shadow-xl dark:shadow-none flex flex-col justify-between" data-category="structure">
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="px-2.5 py-0.5 rounded-md bg-teal-50 dark:bg-teal-950/50 text-teal-600 dark:text-teal-400 font-bold text-[11px] font-mono uppercase">Figure 2 • FE-SEM & PSD</span>
+              <span class="text-[11px] text-slate-400 font-mono">Grain Morphology</span>
+            </div>
+            <h4 class="text-base font-bold text-slate-900 dark:text-white">FE-SEM Microstructure & Particle Sizing</h4>
+            <p class="text-xs text-slate-600 dark:text-slate-400 mt-1 font-body">Examined surface morphology, grain boundaries, and nanoscale agglomeration, paired with ImageJ statistical analysis for particle size distributions.</p>
+          </div>
+          <div class="mt-4 relative rounded-xl overflow-hidden bg-slate-100 dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 min-h-[220px] flex items-center justify-center cursor-pointer" onclick="handleCardClick('fig-2')">
+            <img id="fig-2" src="Images/figure 2.jpg" class="w-full h-full object-contain max-h-[280px] hover:scale-[1.02] transition-transform duration-300" alt="Figure 2: FE-SEM & PSD" onload="this.classList.remove('hidden'); if(this.nextElementSibling) this.nextElementSibling.classList.add('hidden');" onerror="handleImgError(this)" />
+            <div class="placeholder hidden flex flex-col items-center justify-center p-6 text-center text-slate-400 dark:text-slate-500">
+              <span class="text-xs font-semibold text-slate-700 dark:text-slate-300">Figure 2: FE-SEM Micrographs & Histograms</span>
+              <span class="text-[10px] text-slate-400 mt-1">Click to inspect full figure</span>
+            </div>
+            </div>
+        </div>
+
+        <!-- Figure 3: EDS & Mapping -->
+        <div class="bento-card g-item rounded-2xl bg-white/90 dark:bg-[#0f1422]/90 border border-slate-200 dark:border-slate-800 p-5 shadow-sm hover:shadow-xl dark:shadow-none flex flex-col justify-between" data-category="structure">
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="px-2.5 py-0.5 rounded-md bg-emerald-50 dark:bg-emerald-950/50 text-emerald-600 dark:text-emerald-400 font-bold text-[11px] font-mono uppercase">Figure 3 • EDS & Mapping</span>
+              <span class="text-[11px] text-slate-400 font-mono">Elemental Distribution</span>
+            </div>
+            <h4 class="text-base font-bold text-slate-900 dark:text-white">EDS Elemental Composition & Spatial Mapping</h4>
+            <p class="text-xs text-slate-600 dark:text-slate-400 mt-1 font-body">Performed qualitative and quantitative elemental stoichiometric verification along with spatial elemental mapping to confirm uniform dopant distribution.</p>
+          </div>
+          <div class="mt-4 relative rounded-xl overflow-hidden bg-slate-100 dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 min-h-[220px] flex items-center justify-center cursor-pointer" onclick="handleCardClick('fig-3')">
+            <img id="fig-3" src="Images/figure 3.png" class="w-full h-full object-contain max-h-[280px] hover:scale-[1.02] transition-transform duration-300" alt="Figure 3: EDS Elemental Mapping" onload="this.classList.remove('hidden'); if(this.nextElementSibling) this.nextElementSibling.classList.add('hidden');" onerror="handleImgError(this)" />
+            <div class="placeholder hidden flex flex-col items-center justify-center p-6 text-center text-slate-400 dark:text-slate-500">
+              <span class="text-xs font-semibold text-slate-700 dark:text-slate-300">Figure 3: EDS Spectra & Elemental Mapping</span>
+              <span class="text-[10px] text-slate-400 mt-1">Click to inspect full figure</span>
+            </div>
+            </div>
+        </div>
+
+        <!-- Figure 4: FTIR -->
+        <div class="bento-card g-item rounded-2xl bg-white/90 dark:bg-[#0f1422]/90 border border-slate-200 dark:border-slate-800 p-5 shadow-sm hover:shadow-xl dark:shadow-none flex flex-col justify-between" data-category="structure">
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="px-2.5 py-0.5 rounded-md bg-rose-50 dark:bg-rose-950/50 text-rose-600 dark:text-rose-400 font-bold text-[11px] font-mono uppercase">Figure 4 • FTIR Spectroscopy</span>
+              <span class="text-[11px] text-slate-400 font-mono">Vibrational Modes</span>
+            </div>
+            <h4 class="text-base font-bold text-slate-900 dark:text-white">FTIR Metal-Oxygen Vibrational Modes</h4>
+            <p class="text-xs text-slate-600 dark:text-slate-400 mt-1 font-body">Identified metal-oxygen coordination bonds, octahedral vibrational stretching modes, and surface chemical species across synthesized formulations.</p>
+          </div>
+          <div class="mt-4 relative rounded-xl overflow-hidden bg-slate-100 dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 min-h-[220px] flex items-center justify-center cursor-pointer" onclick="handleCardClick('fig-4')">
+            <img id="fig-4" src="Images/figure 4.jpg" class="w-full h-full object-contain max-h-[280px] hover:scale-[1.02] transition-transform duration-300" alt="Figure 4: FTIR Spectra" onload="this.classList.remove('hidden'); if(this.nextElementSibling) this.nextElementSibling.classList.add('hidden');" onerror="handleImgError(this)" />
+            <div class="placeholder hidden flex flex-col items-center justify-center p-6 text-center text-slate-400 dark:text-slate-500">
+              <span class="text-xs font-semibold text-slate-700 dark:text-slate-300">Figure 4: FTIR Vibrational Spectra</span>
+              <span class="text-[10px] text-slate-400 mt-1">Click to inspect full figure</span>
+            </div>
+            </div>
+        </div>
+
+        <!-- Figure 5: UV-Vis & Tauc -->
+        <div class="bento-card g-item rounded-2xl bg-white/90 dark:bg-[#0f1422]/90 border border-slate-200 dark:border-slate-800 p-5 shadow-sm hover:shadow-xl dark:shadow-none flex flex-col justify-between" data-category="structure">
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="px-2.5 py-0.5 rounded-md bg-amber-50 dark:bg-amber-950/50 text-amber-600 dark:text-amber-400 font-bold text-[11px] font-mono uppercase">Figure 5 • UV-Vis & Tauc</span>
+              <span class="text-[11px] text-slate-400 font-mono">Optical Bandgap</span>
+            </div>
+            <h4 class="text-base font-bold text-slate-900 dark:text-white">UV-Vis DRS & Tauc Optical Bandgap Analysis</h4>
+            <p class="text-xs text-slate-600 dark:text-slate-400 mt-1 font-body">Evaluated electronic transition thresholds and optical absorption dynamics, deriving direct and indirect optical bandgaps via Tauc transformation.</p>
+          </div>
+          <div class="mt-4 relative rounded-xl overflow-hidden bg-slate-100 dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 min-h-[220px] flex items-center justify-center cursor-pointer" onclick="handleCardClick('fig-5')">
+            <img id="fig-5" src="Images/figure 5.jpg" class="w-full h-full object-contain max-h-[280px] hover:scale-[1.02] transition-transform duration-300" alt="Figure 5: Tauc Bandgap Plots" onload="this.classList.remove('hidden'); if(this.nextElementSibling) this.nextElementSibling.classList.add('hidden');" onerror="handleImgError(this)" />
+            <div class="placeholder hidden flex flex-col items-center justify-center p-6 text-center text-slate-400 dark:text-slate-500">
+              <span class="text-xs font-semibold text-slate-700 dark:text-slate-300">Figure 5: UV-Vis Absorbance & Tauc Plots</span>
+              <span class="text-[10px] text-slate-400 mt-1">Click to inspect full figure</span>
+            </div>
+            </div>
+        </div>
+
+        <!-- Figure 6: Thermal Kinetics (TGA / DTA) -->
+        <div class="bento-card g-item rounded-2xl bg-white/90 dark:bg-[#0f1422]/90 border border-slate-200 dark:border-slate-800 p-5 shadow-sm hover:shadow-xl dark:shadow-none flex flex-col justify-between" data-category="structure">
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="px-2.5 py-0.5 rounded-md bg-orange-50 dark:bg-orange-950/50 text-orange-600 dark:text-orange-400 font-bold text-[11px] font-mono uppercase">Figure 6 • Thermal Kinetics</span>
+              <span class="text-[11px] text-slate-400 font-mono">TGA / DTA / DTG</span>
+            </div>
+            <h4 class="text-base font-bold text-slate-900 dark:text-white">Simultaneous TGA/DTA Thermal Decomposition</h4>
+            <p class="text-xs text-slate-600 dark:text-slate-400 mt-1 font-body">Tracked precursor pyrolysis, moisture release, decomposition stages, and thermal crystallization temperatures up to 800 °C.</p>
+          </div>
+          <div class="mt-4 relative rounded-xl overflow-hidden bg-slate-100 dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 min-h-[220px] flex items-center justify-center cursor-pointer" onclick="handleCardClick('fig-6')">
+            <img id="fig-6" src="Images/figure 6.jpg" class="w-full h-full object-contain max-h-[280px] hover:scale-[1.02] transition-transform duration-300" alt="Figure 6: TGA / DTA Thermal Curves" onload="this.classList.remove('hidden'); if(this.nextElementSibling) this.nextElementSibling.classList.add('hidden');" onerror="handleImgError(this)" />
+            <div class="placeholder hidden flex flex-col items-center justify-center p-6 text-center text-slate-400 dark:text-slate-500">
+              <span class="text-xs font-semibold text-slate-700 dark:text-slate-300">Figure 6: TGA / DTA / DTG Thermograms</span>
+              <span class="text-[10px] text-slate-400 mt-1">Click to inspect full figure</span>
+            </div>
+            </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- SECTION 2: ELECTROCHEMICAL & FUNCTIONAL PROPERTIES -->
+    <div class="gallery-category-group mb-12" data-group="electrochem">
+      <div class="flex items-center space-x-3 mb-4">
+        <div class="w-2.5 h-2.5 rounded-full bg-indigo-500"></div>
+        <h3 class="text-lg font-bold text-slate-900 dark:text-white tracking-tight">2. Electrochemical & Functional Diagnostics</h3>
+        <span class="text-xs font-mono text-slate-400 dark:text-slate-500">(Figures 7–12)</span>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+
+        <!-- Figure 7: CV -->
+        <div class="bento-card g-item rounded-2xl bg-white/90 dark:bg-[#0f1422]/90 border border-slate-200 dark:border-slate-800 p-5 shadow-sm hover:shadow-xl dark:shadow-none flex flex-col justify-between" data-category="electrochem">
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="px-2.5 py-0.5 rounded-md bg-indigo-50 dark:bg-indigo-950/50 text-indigo-600 dark:text-indigo-400 font-bold text-[11px] font-mono uppercase">Figure 7 • Electrochemistry</span>
+              <span class="text-[11px] text-slate-400 font-mono">Multi-Cycle CV</span>
+            </div>
+            <h4 class="text-base font-bold text-slate-900 dark:text-white">Cyclic Voltammetry (CV) &amp; Redox Kinetics</h4>
+            <p class="text-xs text-slate-600 dark:text-slate-400 mt-1 font-body">
+              Recorded multi-cycle voltammograms across full-cell devices to examine dynamic charge-transport kinetics and redox reversibility. While pristine LiNiO₂ exhibits severe intrinsic polarization and sluggish kinetics due to cation disorder, moderate Mg/Al co-doping substantially boosts current responsiveness, relieves internal strain, and establishes smooth, highly reversible cyclic kinetics.
+            </p>
+          </div>
+          <div class="mt-4 relative rounded-xl overflow-hidden bg-slate-100 dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 min-h-[220px] flex items-center justify-center cursor-pointer" onclick="handleCardClick('fig-7')">
+            <img id="fig-7" src="Images/figure 7.jpg" class="w-full h-full object-contain max-h-[280px] hover:scale-[1.02] transition-transform duration-300" alt="Figure 7: Cyclic Voltammograms" onload="this.classList.remove('hidden'); if(this.nextElementSibling) this.nextElementSibling.classList.add('hidden');" onerror="handleImgError(this)" />
+            <div class="placeholder hidden flex flex-col items-center justify-center p-6 text-center text-slate-400 dark:text-slate-500">
+              <span class="text-xs font-semibold text-slate-700 dark:text-slate-300">Figure 7: Multi-Cycle CV Voltammograms</span>
+              <span class="text-[10px] text-slate-400 mt-1">Click to inspect full figure</span>
+            </div>
+            </div>
+        </div>
+
+        <!-- Figure 8: EIS -->
+        <div class="bento-card g-item rounded-2xl bg-white/90 dark:bg-[#0f1422]/90 border border-slate-200 dark:border-slate-800 p-5 shadow-sm hover:shadow-xl dark:shadow-none flex flex-col justify-between" data-category="electrochem">
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="px-2.5 py-0.5 rounded-md bg-blue-50 dark:bg-blue-950/50 text-blue-600 dark:text-blue-400 font-bold text-[11px] font-mono uppercase">Figure 8 • EIS Spectroscopy</span>
+              <span class="text-[11px] text-slate-400 font-mono">Nyquist & Rct</span>
+            </div>
+            <h4 class="text-base font-bold text-slate-900 dark:text-white">Electrochemical Impedance Spectroscopy (EIS)</h4>
+            <p class="text-xs text-slate-600 dark:text-slate-400 mt-1 font-body">Conducted impedance spectroscopy and equivalent-circuit modeling in ZSimpWin to isolate bulk resistance, charge-transfer resistance (Rct), and Li⁺ diffusion coefficients.</p>
+          </div>
+          <div class="mt-4 relative rounded-xl overflow-hidden bg-slate-100 dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 min-h-[220px] flex items-center justify-center cursor-pointer" onclick="handleCardClick('fig-8')">
+            <img id="fig-8" src="Images/figure 8.png" class="w-full h-full object-contain max-h-[280px] hover:scale-[1.02] transition-transform duration-300" alt="Figure 8: EIS Nyquist Plots" onload="this.classList.remove('hidden'); if(this.nextElementSibling) this.nextElementSibling.classList.add('hidden');" onerror="handleImgError(this)" />
+            <div class="placeholder hidden flex flex-col items-center justify-center p-6 text-center text-slate-400 dark:text-slate-500">
+              <span class="text-xs font-semibold text-slate-700 dark:text-slate-300">Figure 8: EIS Nyquist Plots & Circuit Fits</span>
+              <span class="text-[10px] text-slate-400 mt-1">Click to inspect full figure</span>
+            </div>
+            </div>
+        </div>
+
+        <!-- Figure 9: Dielectric Properties, Loss & AC Conductivity -->
+        <div class="bento-card g-item rounded-2xl bg-white/90 dark:bg-[#0f1422]/90 border border-slate-200 dark:border-slate-800 p-5 shadow-sm hover:shadow-xl dark:shadow-none flex flex-col justify-between" data-category="electrochem">
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="px-2.5 py-0.5 rounded-md bg-purple-50 dark:bg-purple-950/50 text-purple-600 dark:text-purple-400 font-bold text-[11px] font-mono uppercase">Figure 9 • Dielectric Analysis</span>
+              <span class="text-[11px] text-slate-400 font-mono">ε', tan δ & σac</span>
+            </div>
+            <h4 class="text-base font-bold text-slate-900 dark:text-white">Dielectric Constant, Loss & AC Conductivity</h4>
+            <p class="text-xs text-slate-600 dark:text-slate-400 mt-1 font-body">Measured frequency-dependent dielectric permittivity (ε'), loss tangent (tan δ), and AC conductivity (σac) over broad frequency ranges for capacitive energy storage.</p>
+          </div>
+          <div class="mt-4 relative rounded-xl overflow-hidden bg-slate-100 dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 min-h-[220px] flex items-center justify-center cursor-pointer" onclick="handleCardClick('fig-9')">
+            <img id="fig-9" src="Images/figure 9.png" class="w-full h-full object-contain max-h-[280px] hover:scale-[1.02] transition-transform duration-300" alt="Figure 9: Dielectric Properties" onload="this.classList.remove('hidden'); if(this.nextElementSibling) this.nextElementSibling.classList.add('hidden');" onerror="handleImgError(this)" />
+            <div class="placeholder hidden flex flex-col items-center justify-center p-6 text-center text-slate-400 dark:text-slate-500">
+              <span class="text-xs font-semibold text-slate-700 dark:text-slate-300">Figure 9: Dielectric Permittivity, Loss & σac Plots</span>
+              <span class="text-[10px] text-slate-400 mt-1">Click to inspect full figure</span>
+            </div>
+            </div>
+        </div>
+
+        <!-- Figure 10: Impedance & Electric Modulus -->
+        <div class="bento-card g-item rounded-2xl bg-white/90 dark:bg-[#0f1422]/90 border border-slate-200 dark:border-slate-800 p-5 shadow-sm hover:shadow-xl dark:shadow-none flex flex-col justify-between" data-category="electrochem">
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="px-2.5 py-0.5 rounded-md bg-violet-50 dark:bg-violet-950/50 text-violet-600 dark:text-violet-400 font-bold text-[11px] font-mono uppercase">Figure 10 • Modulus Formalism</span>
+              <span class="text-[11px] text-slate-400 font-mono">M', M'' & Z*</span>
+            </div>
+            <h4 class="text-base font-bold text-slate-900 dark:text-white">Complex Impedance & Electric Modulus Formalism</h4>
+            <p class="text-xs text-slate-600 dark:text-slate-400 mt-1 font-body">Employed complex electric modulus formalisms (M', M'') and impedance representations to deconvolute grain, grain-boundary, and interfacial relaxation processes.</p>
+          </div>
+          <div class="mt-4 relative rounded-xl overflow-hidden bg-slate-100 dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 min-h-[220px] flex items-center justify-center cursor-pointer" onclick="handleCardClick('fig-10')">
+            <img id="fig-10" src="Images/figure 10.png" class="w-full h-full object-contain max-h-[280px] hover:scale-[1.02] transition-transform duration-300" alt="Figure 10: Complex Modulus Formalism" onload="this.classList.remove('hidden'); if(this.nextElementSibling) this.nextElementSibling.classList.add('hidden');" onerror="handleImgError(this)" />
+            <div class="placeholder hidden flex flex-col items-center justify-center p-6 text-center text-slate-400 dark:text-slate-500">
+              <span class="text-xs font-semibold text-slate-700 dark:text-slate-300">Figure 10: Electric Modulus (M', M'') & Z* Plots</span>
+              <span class="text-[10px] text-slate-400 mt-1">Click to inspect full figure</span>
+            </div>
+            </div>
+        </div>
+
+        <!-- Figure 11: Photocatalytic Degradation -->
+        <div class="bento-card g-item rounded-2xl bg-white/90 dark:bg-[#0f1422]/90 border border-slate-200 dark:border-slate-800 p-5 shadow-sm hover:shadow-xl dark:shadow-none flex flex-col justify-between" data-category="electrochem">
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="px-2.5 py-0.5 rounded-md bg-emerald-50 dark:bg-emerald-950/50 text-emerald-600 dark:text-emerald-400 font-bold text-[11px] font-mono uppercase">Figure 11 • Photocatalysis</span>
+              <span class="text-[11px] text-slate-400 font-mono">Dye Degradation</span>
+            </div>
+            <h4 class="text-base font-bold text-slate-900 dark:text-white">Photocatalytic Pollutant Degradation Kinetics</h4>
+            <p class="text-xs text-slate-600 dark:text-slate-400 mt-1 font-body">Evaluated photocatalytic dye degradation efficiency (e.g., Methylene Blue under light irradiation), determining reaction rate constants and degradation kinetics.</p>
+          </div>
+          <div class="mt-4 relative rounded-xl overflow-hidden bg-slate-100 dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 min-h-[220px] flex items-center justify-center cursor-pointer" onclick="handleCardClick('fig-11')">
+            <img id="fig-11" src="Images/figure 11.png" class="w-full h-full object-contain max-h-[280px] hover:scale-[1.02] transition-transform duration-300" alt="Figure 11: Photocatalytic Degradation" onload="this.classList.remove('hidden'); if(this.nextElementSibling) this.nextElementSibling.classList.add('hidden');" onerror="handleImgError(this)" />
+            <div class="placeholder hidden flex flex-col items-center justify-center p-6 text-center text-slate-400 dark:text-slate-500">
+              <span class="text-xs font-semibold text-slate-700 dark:text-slate-300">Figure 11: Photocatalytic Degradation Curves</span>
+              <span class="text-[10px] text-slate-400 mt-1">Click to inspect full figure</span>
+            </div>
+            </div>
+        </div>
+
+        <!-- Figure 12: Piezoelectric Performance -->
+        <div class="bento-card g-item rounded-2xl bg-white/90 dark:bg-[#0f1422]/90 border border-slate-200 dark:border-slate-800 p-5 shadow-sm hover:shadow-xl dark:shadow-none flex flex-col justify-between" data-category="electrochem">
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="px-2.5 py-0.5 rounded-md bg-fuchsia-50 dark:bg-fuchsia-950/50 text-fuchsia-600 dark:text-fuchsia-400 font-bold text-[11px] font-mono uppercase">Figure 12 • Piezoelectric</span>
+              <span class="text-[11px] text-slate-400 font-mono">Output Voltage</span>
+            </div>
+            <h4 class="text-base font-bold text-slate-900 dark:text-white">Piezoelectric Output & Energy Harvesting</h4>
+            <p class="text-xs text-slate-600 dark:text-slate-400 mt-1 font-body">Evaluated open-circuit piezoelectric output voltage generation under periodic mechanical impact for self-powered sensing and energy harvesting devices.</p>
+          </div>
+          <div class="mt-4 relative rounded-xl overflow-hidden bg-slate-100 dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 min-h-[220px] flex items-center justify-center cursor-pointer" onclick="handleCardClick('fig-12')">
+            <img id="fig-12" src="Images/figure 12.png" class="w-full h-full object-contain max-h-[280px] hover:scale-[1.02] transition-transform duration-300" alt="Figure 12: Piezoelectric Voltage Output" onload="this.classList.remove('hidden'); if(this.nextElementSibling) this.nextElementSibling.classList.add('hidden');" onerror="handleImgError(this)" />
+            <div class="placeholder hidden flex flex-col items-center justify-center p-6 text-center text-slate-400 dark:text-slate-500">
+              <span class="text-xs font-semibold text-slate-700 dark:text-slate-300">Figure 12: Piezoelectric Open-Circuit Voltage</span>
+              <span class="text-[10px] text-slate-400 mt-1">Click to inspect full figure</span>
+            </div>
+            </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- SECTION 3: SYNTHESIS METHODOLOGIES & DEVICE PROTOTYPING -->
+    <div class="gallery-category-group" data-group="synthesis">
+      <div class="flex items-center space-x-3 mb-4">
+        <div class="w-2.5 h-2.5 rounded-full bg-emerald-500"></div>
+        <h3 class="text-lg font-bold text-slate-900 dark:text-white tracking-tight">3. Synthesis Methodologies & Device Prototyping</h3>
+        <span class="text-xs font-mono text-slate-400 dark:text-slate-500">(Figures 13–16)</span>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+
+        <!-- Figure 13: CR2032 Prototyping -->
+        <div class="bento-card g-item rounded-2xl bg-white/90 dark:bg-[#0f1422]/90 border border-slate-200 dark:border-slate-800 p-5 shadow-sm hover:shadow-xl dark:shadow-none flex flex-col justify-between" data-category="synthesis">
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="px-2.5 py-0.5 rounded-md bg-emerald-50 dark:bg-emerald-950/50 text-emerald-600 dark:text-emerald-400 font-bold text-[11px] font-mono uppercase">Figure 13 • Device Prototyping</span>
+            </div>
+            <h4 class="text-base font-bold text-slate-900 dark:text-white">CR2032 Coin-Cell Prototyping & Slurry Coating</h4>
+            <p class="text-xs text-slate-600 dark:text-slate-400 mt-1 font-body">Optimized active material slurry rheology, executed doctor-blade casting on metallic collectors, vacuum calendered, and assembled CR2032 cells in an argon glovebox.</p>
+          </div>
+          <div class="mt-4 relative rounded-xl overflow-hidden bg-slate-100 dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 min-h-[220px] flex items-center justify-center cursor-pointer" onclick="handleCardClick('fig-13')">
+            <img id="fig-13" src="Images/figure 13.jpg" class="w-full h-full object-contain max-h-[280px] hover:scale-[1.02] transition-transform duration-300" alt="Figure 13: Coin Cell Assembly" onload="this.classList.remove('hidden'); if(this.nextElementSibling) this.nextElementSibling.classList.add('hidden');" onerror="handleImgError(this)" />
+            <div class="placeholder hidden flex flex-col items-center justify-center p-6 text-center text-slate-400 dark:text-slate-500">
+              <span class="text-xs font-semibold text-slate-700 dark:text-slate-300">Figure 13: Coin Cell Fabrication & Slurry Coating</span>
+              <span class="text-[10px] text-slate-400 mt-1">Click to inspect full figure</span>
+            </div>
+            </div>
+        </div>
+
+        <!-- Figure 14: Sol-Gel Route -->
+        <div class="bento-card g-item rounded-2xl bg-white/90 dark:bg-[#0f1422]/90 border border-slate-200 dark:border-slate-800 p-5 shadow-sm hover:shadow-xl dark:shadow-none flex flex-col justify-between" data-category="synthesis">
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="px-2.5 py-0.5 rounded-md bg-blue-50 dark:bg-blue-950/50 text-blue-600 dark:text-blue-400 font-bold text-[11px] font-mono uppercase">Figure 14 • Sol-Gel Method</span>
+            </div>
+            <h4 class="text-base font-bold text-slate-900 dark:text-white">Sol-Gel Citrate Pechini Synthesis Protocol</h4>
+            <p class="text-xs text-slate-600 dark:text-slate-400 mt-1 font-body">Wet-chemical chelation, controlled polymeric gelation, xerogel drying, and calcination protocols to synthesize homogeneous, stoichiometric nano-powders.</p>
+          </div>
+          <div class="mt-4 relative rounded-xl overflow-hidden bg-slate-100 dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 min-h-[220px] flex items-center justify-center cursor-pointer" onclick="handleCardClick('fig-14')">
+            <img id="fig-14" src="Images/figure 14.png" class="w-full h-full object-contain max-h-[280px] hover:scale-[1.02] transition-transform duration-300" alt="Figure 14: Sol-Gel Flowchart" onload="this.classList.remove('hidden'); if(this.nextElementSibling) this.nextElementSibling.classList.add('hidden');" onerror="handleImgError(this)" />
+            <div class="placeholder hidden flex flex-col items-center justify-center p-6 text-center text-slate-400 dark:text-slate-500">
+              <span class="text-xs font-semibold text-slate-700 dark:text-slate-300">Figure 14: Sol-Gel Pechini Synthesis Scheme</span>
+              <span class="text-[10px] text-slate-400 mt-1">Click to inspect full figure</span>
+            </div>
+            </div>
+        </div>
+
+        <!-- Figure 15: Solid-State Route -->
+        <div class="bento-card g-item rounded-2xl bg-white/90 dark:bg-[#0f1422]/90 border border-slate-200 dark:border-slate-800 p-5 shadow-sm hover:shadow-xl dark:shadow-none flex flex-col justify-between" data-category="synthesis">
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="px-2.5 py-0.5 rounded-md bg-amber-50 dark:bg-amber-950/50 text-amber-600 dark:text-amber-400 font-bold text-[11px] font-mono uppercase">Figure 15 • Solid-State Route</span>
+            </div>
+            <h4 class="text-base font-bold text-slate-900 dark:text-white">High-Temperature Solid-State Calcination</h4>
+            <p class="text-xs text-slate-600 dark:text-slate-400 mt-1 font-body">High-purity precursor stoichiometry balancing, repeated mechanical grinding, and programmed high-temperature calcination cycles for phase synthesis.</p>
+          </div>
+          <div class="mt-4 relative rounded-xl overflow-hidden bg-slate-100 dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 min-h-[220px] flex items-center justify-center cursor-pointer" onclick="handleCardClick('fig-15')">
+            <img id="fig-15" src="Images/figure 15.png" class="w-full h-full object-contain max-h-[280px] hover:scale-[1.02] transition-transform duration-300" alt="Figure 15: Solid-State Synthesis" onload="this.classList.remove('hidden'); if(this.nextElementSibling) this.nextElementSibling.classList.add('hidden');" onerror="handleImgError(this)" />
+            <div class="placeholder hidden flex flex-col items-center justify-center p-6 text-center text-slate-400 dark:text-slate-500">
+              <span class="text-xs font-semibold text-slate-700 dark:text-slate-300">Figure 15: Solid-State Reaction Flowchart</span>
+              <span class="text-[10px] text-slate-400 mt-1">Click to inspect full figure</span>
+            </div>
+            </div>
+        </div>
+
+        <!-- Figure 16: Film Solution Casting -->
+        <div class="bento-card g-item rounded-2xl bg-white/90 dark:bg-[#0f1422]/90 border border-slate-200 dark:border-slate-800 p-5 shadow-sm hover:shadow-xl dark:shadow-none flex flex-col justify-between" data-category="synthesis">
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="px-2.5 py-0.5 rounded-md bg-purple-50 dark:bg-purple-950/50 text-purple-600 dark:text-purple-400 font-bold text-[11px] font-mono uppercase">Figure 16 • Solution Casting</span>
+            </div>
+            <h4 class="text-base font-bold text-slate-900 dark:text-white">Flexible Nanocomposite Film Solution Casting</h4>
+            <p class="text-xs text-slate-600 dark:text-slate-400 mt-1 font-body">Ultrasonic nanoparticle deagglomeration, polymer matrix dissolution, precision petri-dish solution casting, and controlled thermal curing of free-standing films.</p>
+          </div>
+          <div class="mt-4 relative rounded-xl overflow-hidden bg-slate-100 dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 min-h-[220px] flex items-center justify-center cursor-pointer" onclick="handleCardClick('fig-16')">
+            <img id="fig-16" src="Images/figure 16.png" class="w-full h-full object-contain max-h-[280px] hover:scale-[1.02] transition-transform duration-300" alt="Figure 16: Nanocomposite Film Casting" onload="this.classList.remove('hidden'); if(this.nextElementSibling) this.nextElementSibling.classList.add('hidden');" onerror="handleImgError(this)" />
+            <div class="placeholder hidden flex flex-col items-center justify-center p-6 text-center text-slate-400 dark:text-slate-500">
+              <span class="text-xs font-semibold text-slate-700 dark:text-slate-300">Figure 16: Nanocomposite Film Casting Protocol</span>
+              <span class="text-[10px] text-slate-400 mt-1">Click to inspect full figure</span>
+            </div>
+            </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ACADEMIC APPOINTMENTS & RESEARCH ASSISTANTSHIPS -->
+  <section id="assistantships" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 border-t border-slate-200 dark:border-slate-800">
+    <div class="mb-6">
+      <div class="flex items-center space-x-2 text-xs font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400 font-mono mb-1.5">
+        <span>Faculty Mentorship & Positions</span>
+      </div>
+      <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+        Research Assistantships & Laboratory Appointments
+      </h2>
+      <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-1">
+        Direct research appointments under faculty advisors at Rajshahi University of Engineering & Technology (RUET).
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-5">
+
+      <!-- Dr. Md. Aminul Islam -->
+      <div class="bento-card p-5 sm:p-6 rounded-2xl bg-white/90 dark:bg-[#0f1422]/90 border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between">
+        <div>
+          <div class="flex flex-wrap items-center justify-between gap-2 mb-2.5">
+            <span class="px-2.5 py-0.5 rounded-md bg-emerald-50 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-300 font-bold text-[11px] font-mono">
+              Research Assistant • July 2025 – August 2026
+            </span>
+            <span class="text-[11px] text-slate-400 font-mono">RUET</span>
+          </div>
+
+          <h3 class="text-base sm:text-lg font-bold text-slate-900 dark:text-white tracking-tight">
+            Next-Generation Rechargeable Energy Storage Devices
+          </h3>
+          <div class="text-xs font-semibold text-blue-600 dark:text-blue-400 mt-1 flex items-center space-x-1.5">
+            <span>Advisor: <strong>Dr. Md. Aminul Islam</strong></span>
+            <span>•</span>
+            <span class="text-slate-500 dark:text-slate-400">Assistant Professor, Dept. of MSE, RUET</span>
+          </div>
+
+          <p class="mt-3 text-xs sm:text-[13px] text-slate-600 dark:text-slate-300 leading-relaxed font-body">
+            Conducted advanced experimental research focusing on the chemical synthesis, defect engineering, and electrochemical kinetics of cobalt-free <strong>LiNiO₂</strong> cathodes for next-generation lithium-ion batteries.
+          </p>
+
+          <ul class="mt-3.5 space-y-1.5 text-xs text-slate-600 dark:text-slate-400 font-body">
+            <li class="flex items-start space-x-2">
+              <span class="text-emerald-500 font-bold">✔</span>
+              <span><strong>Cathode Engineering:</strong> Synthesized pristine and Mg²⁺/Al³⁺ co-doped LiNiO₂ via citrate sol-gel auto-combustion to mitigate lattice microstrain.</span>
+            </li>
+            <li class="flex items-start space-x-2">
+              <span class="text-emerald-500 font-bold">✔</span>
+              <span><strong>Device Prototyping:</strong> Optimized slurry rheology, executed doctor-blade foil casting, and assembled hermetic CR2032 coin cells in an argon glovebox.</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="mt-4 pt-3 border-t border-slate-100 dark:border-slate-800 text-[11px] font-mono text-slate-500 dark:text-slate-400 flex items-center justify-between">
+          <span>Contact: aminul@mse.ruet.ac.bd</span>
+        </div>
+      </div>
+
+      <!-- Dr. Mohammad Shahed Hasan Khan Tushar (Dept. of ME) -->
+      <div class="bento-card p-5 sm:p-6 rounded-2xl bg-white/90 dark:bg-[#0f1422]/90 border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between">
+        <div>
+          <div class="flex flex-wrap items-center justify-between gap-2 mb-2.5">
+            <span class="px-2.5 py-0.5 rounded-md bg-purple-50 dark:bg-purple-950/60 text-purple-700 dark:text-purple-300 font-bold text-[11px] font-mono">
+              Research Assistant • January 2025 – Present
+            </span>
+            <span class="text-[11px] text-slate-400 font-mono">Energy Materials Lab</span>
+          </div>
+
+          <h3 class="text-base sm:text-lg font-bold text-slate-900 dark:text-white tracking-tight">
+            Multifunctional Oxide Nanomaterials & Nanocomposites
+          </h3>
+          <div class="text-xs font-semibold text-purple-600 dark:text-purple-400 mt-1 flex items-center space-x-1.5">
+            <span>Advisor: <strong>Dr. Mohammad Shahed Hasan Khan Tushar</strong></span>
+            <span>•</span>
+            <span class="text-slate-500 dark:text-slate-400">Professor, Dept. of ME, RUET</span>
+          </div>
+
+          <p class="mt-3 text-xs sm:text-[13px] text-slate-600 dark:text-slate-300 leading-relaxed font-body">
+            Conducted targeted investigation into electroactive oxide nanostructures (BaTiO₃, BaFe₁₂O₁₉, Bi₄Ti₃O₁₂, and Ni-doped bismuth zirconate) and their solution-cast incorporation into PMMA and PVDF polymer matrices.
+          </p>
+
+          <ul class="mt-3.5 space-y-1.5 text-xs text-slate-600 dark:text-slate-400 font-body">
+            <li class="flex items-start space-x-2">
+              <span class="text-purple-500 font-bold">✔</span>
+              <span><strong>Nanomaterials Synthesis:</strong> Formulated solid-state and sol-gel routes to tailor dielectric, piezoelectric, optical, and catalytic responses.</span>
+            </li>
+            <li class="flex items-start space-x-2">
+              <span class="text-purple-500 font-bold">✔</span>
+              <span><strong>Structure-Property Testing:</strong> Integrated XRD Williamson-Hall microstrain, FE-SEM/EDS morphology, FTIR vibrational analysis, and broadband dielectric permittivity.</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="mt-4 pt-3 border-t border-slate-100 dark:border-slate-800 text-[11px] font-mono text-slate-500 dark:text-slate-400 flex items-center justify-between">
+          <span>Contact: mstushar@me.ruet.ac.bd</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Publications & Ongoing Work -->
+  <section id="publications" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 border-t border-slate-200 dark:border-slate-800">
+    <div class="max-w-5xl">
+      <div class="flex items-center space-x-2 text-xs font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400 font-mono mb-1.5">
+        <span>Scholarly Output & Dissemination</span>
+      </div>
+      <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight mb-6">
+        Peer-Reviewed Articles & Conference Submissions
+      </h2>
+
+      <!-- The 4 Papers explicitly requested -->
+      <div class="space-y-3.5">
+        
+        <!-- Paper 1 -->
+        <div class="p-4 sm:p-5 rounded-xl bg-white/90 dark:bg-[#0f1422]/90 border border-slate-200 dark:border-slate-800 text-xs shadow-sm hover:border-blue-400/50 transition">
+          <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+            <span class="px-2.5 py-0.5 rounded bg-blue-50 dark:bg-blue-950/60 text-blue-700 dark:text-blue-300 font-bold font-mono text-[10px]">
+              IEEE Conference • Published
+            </span>
+            <span class="text-slate-400 text-[11px] font-mono">Dec 2025</span>
+          </div>
+          <p class="text-slate-900 dark:text-white font-body text-xs sm:text-[13px] leading-relaxed">
+            • <strong>Rafin, A. W.</strong>, <strong>Shahriar, M. T.</strong>, & <strong>Tushar, M. S. H. K.</strong> (2025). <em>Investigation of Dielectric and Piezoelectric Properties of Solid-State Synthesized Bismuth Titanate Nanoparticles</em>. <strong>6th IEEE International Conference on Telecommunications and Photonics, ICTP 2025</strong>, 256–260. <a href="https://doi.org/10.1109/ICTP68765.2025.11414927" target="_blank" class="text-blue-600 dark:text-blue-400 hover:underline font-mono">[DOI]</a>
+          </p>
+        </div>
+
+        <!-- Paper 2 -->
+        <div class="p-4 sm:p-5 rounded-xl bg-white/90 dark:bg-[#0f1422]/90 border border-slate-200 dark:border-slate-800 text-xs shadow-sm hover:border-emerald-400/50 transition">
+          <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+            <span class="px-2.5 py-0.5 rounded bg-emerald-50 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-300 font-bold font-mono text-[10px]">
+              Journal Article • Under Review
+            </span>
+            <span class="text-slate-400 text-[11px] font-mono">2026</span>
+          </div>
+          <p class="text-slate-900 dark:text-white font-body text-xs sm:text-[13px] leading-relaxed">
+            • <strong>Shahriar, M. T.</strong>, <strong>Rafin, A. W.</strong>, <strong>Anwar, F.</strong>, & <strong>Tushar, M. S. H. K.</strong> (2026). <em>Investigation of Photocatalytic, Piezoelectric and Dielectric Properties of Sol-Gel Synthesized Barium Titanate Nanoparticles Reinforced into PMMA Polymer Matrices Nanocomposites for Multifunctional Applications</em>. In: <strong>Journal of Materials Science: Materials in Electronics</strong> <span class="text-amber-600 dark:text-amber-400 font-semibold font-mono">[Under Review]</span>
+          </p>
+        </div>
+
+        <!-- Paper 3 -->
+        <div class="p-4 sm:p-5 rounded-xl bg-white/90 dark:bg-[#0f1422]/90 border border-slate-200 dark:border-slate-800 text-xs shadow-sm hover:border-emerald-400/50 transition">
+          <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+            <span class="px-2.5 py-0.5 rounded bg-emerald-50 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-300 font-bold font-mono text-[10px]">
+              Journal Article • Under Review
+            </span>
+            <span class="text-slate-400 text-[11px] font-mono">2026</span>
+          </div>
+          <p class="text-slate-900 dark:text-white font-body text-xs sm:text-[13px] leading-relaxed">
+            • <strong>Rafin, A. W.</strong>, <strong>Shahriar, M. T.</strong>, & <strong>Tushar, M. S. H. K.</strong> (2026). <em>Strategic Enhancement of Photocatalytic, Piezoelectric and Dielectric Properties of Solid-State Synthesized BaFe12O19 Nanoparticles Reinforced into PMMA Polymer Matrices Nanocomposites for Energy Storage Applications</em>. In: <strong>Surfaces and Interfaces</strong> <span class="text-amber-600 dark:text-amber-400 font-semibold font-mono">[Under Review]</span>
+          </p>
+        </div>
+
+        <!-- Paper 4 -->
+        <div class="p-4 sm:p-5 rounded-xl bg-white/90 dark:bg-[#0f1422]/90 border border-slate-200 dark:border-slate-800 text-xs shadow-sm hover:border-indigo-400/50 transition">
+          <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+            <span class="px-2.5 py-0.5 rounded bg-indigo-50 dark:bg-indigo-950/60 text-indigo-700 dark:text-indigo-300 font-bold font-mono text-[10px]">
+              Conference Proceedings • Under Review
+            </span>
+            <span class="text-slate-400 text-[11px] font-mono">Presented Jan 2026</span>
+          </div>
+          <p class="text-slate-900 dark:text-white font-body text-xs sm:text-[13px] leading-relaxed">
+            • <strong>Rafin, A. W.</strong>, <strong>Shahriar, M. T.</strong>, <strong>Anwar, F.</strong>, & <strong>Tushar, M. S. H. K.</strong> (2026). <em>Analysis of the Effect for Ni doping on Structural and Morphological Properties of Bismuth Zirconate Nanoparticles: Approach for Photocatalytic Activities</em>. Presented at ICMMPE 2026, DUET; In: <strong>AIP Conference Proceedings</strong> <span class="text-amber-600 dark:text-amber-400 font-semibold font-mono">[Under Review]</span>
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Ongoing Work & Manuscripts in Preparation -->
+      <div class="mt-9 pt-7 border-t border-slate-200/80 dark:border-slate-800/80">
+        <div class="flex items-center space-x-2 text-xs font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400 font-mono mb-1.5">
+          <span>Current Progress & Trajectory</span>
+        </div>
+        <h3 class="text-xl font-bold text-slate-900 dark:text-white tracking-tight mb-4">
+          Ongoing Research & Manuscripts in Active Preparation
+        </h3>
+        <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mb-5 leading-relaxed">
+          I am currently expanding the analytical modeling, electrochemical endurance verification, and device-level prototyping for several mature projects nearing submission:
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+          <!-- Ongoing 1: Battery Cathode Paper -->
+          <div class="p-4 sm:p-5 rounded-xl bg-slate-50/80 dark:bg-[#0c101c] border border-slate-200 dark:border-slate-800/80 flex flex-col justify-between">
+            <div>
+              <h4 class="font-bold text-slate-900 dark:text-white text-xs sm:text-sm">
+                Structural Evolution and Electrochemical Performance of Sol-Gel-Derived Mg/Al Co-Doped LiNiO₂ Cathodes for Lithium-Ion Batteries
+              </h4>
+              <p class="text-xs text-slate-600 dark:text-slate-300 mt-2.5 leading-relaxed font-body">
+                <strong>Current Focus:</strong> Finalizing prolonged capacity retention cycler data at 0.5C/1C rates, deconvoluting dynamic phase transformation kinetics from differential capacity curves (dQ/dV), and correlating microstrain reduction with long-term lattice integrity.
+              </p>
+            </div>
+          </div>
+
+          <!-- Ongoing 2: PVDF Nanocomposite Paper -->
+          <div class="p-4 sm:p-5 rounded-xl bg-slate-50/80 dark:bg-[#0c101c] border border-slate-200 dark:border-slate-800/80 flex flex-col justify-between">
+            <div>
+              <h4 class="font-bold text-slate-900 dark:text-white text-xs sm:text-sm">
+                Interfacial Polarization and Energy Storage Performance of (Ba, Cd) Co-doped Bi₄Ti₃O₁₂ Nanoparticle Reinforced PVDF Nanocomposites
+              </h4>
+              <p class="text-xs text-slate-600 dark:text-slate-300 mt-2.5 leading-relaxed font-body">
+                <strong>Current Focus:</strong> Evaluating interfacial Maxwell-Wagner-Sillars (MWS) dielectric relaxation, electroactive β-phase nucleation in PVDF polymer chains, and high-field energy storage density calculation from P-E hysteresis loops.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Ongoing 3: Device Scale-up Banner -->
+        <div class="mt-4 p-4 rounded-xl bg-gradient-to-r from-blue-500/10 via-indigo-500/5 to-emerald-500/10 border border-blue-200/70 dark:border-slate-800 text-xs">
+          <div class="flex items-center space-x-2 font-bold text-slate-900 dark:text-white mb-1">
+            <span>🔬 Continuing Device Prototyping & Laboratory Scaling:</span>
+          </div>
+          <p class="text-slate-600 dark:text-slate-300 leading-relaxed font-body">
+            In RUET's Energy Materials Lab, I am actively extending coin-cell formulation procedures toward multi-layer pouch-cell configurations. This includes investigating drying gradient effects on thick electrode cracking, optimizing binder (PVDF vs. aqueous binders) interactions, and establishing elevated-temperature (45 °C–55 °C) electrochemical impedance protocols.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Methodological Toolkit Section -->
+  <section id="skills" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 border-t border-slate-200 dark:border-slate-800">
+    <div class="flex items-center space-x-2 text-xs font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400 font-mono mb-1.5">
+      <span>Experimental Capabilities</span>
+    </div>
+    <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight mb-6">
+      Instrumentation & Methodological Toolkit
+    </h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 text-xs">
+      
+      <div class="p-5 rounded-xl bg-white/90 dark:bg-[#0f1422]/90 border border-slate-200 dark:border-slate-800 shadow-sm">
+        <div class="w-8 h-8 rounded-lg bg-blue-50 dark:bg-blue-900/40 text-blue-600 dark:text-blue-400 flex items-center justify-center font-bold text-sm mb-3">🧪</div>
+        <h4 class="font-bold text-slate-900 dark:text-white mb-2 text-sm">Synthesis & Prototyping</h4>
+        <ul class="space-y-1.5 text-slate-600 dark:text-slate-400 font-body">
+          <li>• Sol-Gel Citrate Pechini Route</li>
+          <li>• High-Temp Solid-State Calcination</li>
+          <li>• Slurry Rheology & Doctor-Blade Casting</li>
+          <li>• Vacuum Calendering & Roll-Pressing</li>
+          <li>• Argon-Atmosphere CR2032 Assembly</li>
+          <li>• Polymer Solution Film Casting</li>
+        </ul>
+      </div>
+
+      <div class="p-5 rounded-xl bg-white/90 dark:bg-[#0f1422]/90 border border-slate-200 dark:border-slate-800 shadow-sm">
+        <div class="w-8 h-8 rounded-lg bg-emerald-50 dark:bg-emerald-900/40 text-emerald-600 dark:text-emerald-400 flex items-center justify-center font-bold text-sm mb-3">🔬</div>
+        <h4 class="font-bold text-slate-900 dark:text-white mb-2 text-sm">Structural Diagnostics</h4>
+        <ul class="space-y-1.5 text-slate-600 dark:text-slate-400 font-body">
+          <li>• XRD Peak Profiling & Microstrain</li>
+          <li>• Williamson-Hall Size/Strain Analysis</li>
+          <li>• FE-SEM Microstructural Imaging</li>
+          <li>• EDS Elemental Composition & Mapping</li>
+          <li>• FTIR Metal-Oxygen Octahedral Modes</li>
+          <li>• UV-Vis DRS & Tauc Bandgap Fitting</li>
+        </ul>
+      </div>
+
+      <div class="p-5 rounded-xl bg-white/90 dark:bg-[#0f1422]/90 border border-slate-200 dark:border-slate-800 shadow-sm">
+        <div class="w-8 h-8 rounded-lg bg-purple-50 dark:bg-purple-900/40 text-purple-600 dark:text-purple-400 flex items-center justify-center font-bold text-sm mb-3">⚡</div>
+        <h4 class="font-bold text-slate-900 dark:text-white mb-2 text-sm">Electrochemistry & Optics</h4>
+        <ul class="space-y-1.5 text-slate-600 dark:text-slate-400 font-body">
+          <li>• Cyclic Voltammetry (–4.0 to +4.2 V)</li>
+          <li>• Galvanostatic Charge-Discharge (GCD)</li>
+          <li>• Electrochemical Impedance (EIS)</li>
+          <li>• Equivalent Circuit Model Deconvolution</li>
+          <li>• Broadband Dielectric Permittivity</li>
+          <li>• 92% Photocatalytic Dye Degradation</li>
+        </ul>
+      </div>
+
+      <div class="p-5 rounded-xl bg-white/90 dark:bg-[#0f1422]/90 border border-slate-200 dark:border-slate-800 shadow-sm">
+        <div class="w-8 h-8 rounded-lg bg-amber-50 dark:bg-amber-900/40 text-amber-600 dark:text-amber-400 flex items-center justify-center font-bold text-sm mb-3">💻</div>
+        <h4 class="font-bold text-slate-900 dark:text-white mb-2 text-sm">Software & Analysis</h4>
+        <ul class="space-y-1.5 text-slate-600 dark:text-slate-400 font-body">
+          <li>• OriginPro (Plotting & Non-Linear Fit)</li>
+          <li>• X’Pert HighScore (Phase Search & Match)</li>
+          <li>• ImageJ (Particle Sizing & Histograms)</li>
+          <li>• ZSimpWin (EIS Impedance Modeling)</li>
+          <li>• MATLAB & SolidWorks</li>
+          <li>• C / C++ Programming</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- LIGHTBOX MODAL -->
+  <div id="lightbox-modal" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md hidden flex items-center justify-center p-4 no-print" onclick="closeLightbox()">
+    <div class="relative max-w-5xl max-h-[90vh] flex flex-col items-center" onclick="event.stopPropagation()">
+      <button onclick="closeLightbox()" class="absolute -top-10 right-0 text-white/70 hover:text-white text-sm font-semibold flex items-center space-x-1">
+        <span>Close ✕</span>
+      </button>
+      <img id="lightbox-img" class="max-w-full max-h-[82vh] object-contain rounded-lg shadow-2xl" src="" alt="Full view" />
+      <p id="lightbox-caption" class="text-slate-300 text-xs mt-3 font-mono text-center"></p>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-slate-200 dark:border-slate-800 bg-white/50 dark:bg-slate-900/50 py-10 backdrop-blur transition-colors no-print">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500 dark:text-slate-400">
+      <div>
+        <span class="font-bold text-slate-800 dark:text-slate-200">Md. Tanzim Shahriar</span> • Materials Science & Energy Research
+      </div>
+      <div class="flex items-center space-x-4 font-mono">
+        <a href="mailto:2013005@student.ruet.ac.bd" class="hover:text-blue-500 transition">2013005@student.ruet.ac.bd</a>
+        <span>•</span>
+        <button onclick="window.print()" class="hover:text-blue-500 transition underline">Print / Save as PDF</button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script>
+    // Theme toggle
+    const themeBtn = document.getElementById('theme-toggle');
+    if (themeBtn) {
+      themeBtn.addEventListener('click', () => {
+        document.documentElement.classList.toggle('dark');
+        localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
+      });
+    }
+
+    if (localStorage.getItem('theme') === 'light') {
+      document.documentElement.classList.remove('dark');
+    }
+
+    // Gallery Category Filter
+    function filterGallery(cat) {
+      document.querySelectorAll('.g-filter-btn').forEach(btn => {
+        btn.classList.remove('active', 'bg-blue-600', 'text-white', 'shadow-sm');
+        btn.classList.add('bg-slate-100', 'dark:bg-slate-800', 'text-slate-600', 'dark:text-slate-400');
+        if (btn.getAttribute('data-gfilter') === cat) {
+          btn.classList.add('active', 'bg-blue-600', 'text-white', 'shadow-sm');
+          btn.classList.remove('bg-slate-100', 'dark:bg-slate-800', 'text-slate-600', 'dark:text-slate-400');
+        }
+      });
+
+      document.querySelectorAll('.gallery-category-group').forEach(group => {
+        if (cat === 'all' || group.getAttribute('data-group') === cat) {
+          group.style.display = 'block';
+        } else {
+          group.style.display = 'none';
+        }
+      });
+
+      document.querySelectorAll('.g-item').forEach(item => {
+        if (cat === 'all' || item.getAttribute('data-category') === cat) {
+          item.style.display = 'flex';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    }
+
+    // Image fallback handling
+        // Robust Image fallback handling
+    function handleImgError(img) {
+      if (!img.dataset.step) {
+        img.dataset.step = '1';
+        if (img.id === 'profile-display-img') {
+          // If 'Images/profile image.jpg' fails, try URL-encoded or alternative names
+          if (img.src.includes('profile%20image.jpg') || img.src.includes('profile image.jpg')) {
+            img.src = 'Images/profile.jpeg';
+            return;
+          }
+        }
+        if (img.src.includes('Images/')) {
+          img.src = img.src.replace('Images/', 'images/');
+          return;
+        }
+      }
+      if (img.dataset.step === '1') {
+        img.dataset.step = '2';
+        if (img.id === 'profile-display-img') {
+          img.src = 'profile image.jpg';
+          return;
+        }
+        const parts = img.src.split('/');
+        const filename = parts[parts.length - 1];
+        img.src = filename;
+        return;
+      }
+      img.classList.add('hidden');
+      if (img.nextElementSibling && img.nextElementSibling.classList.contains('placeholder')) {
+        img.nextElementSibling.classList.remove('hidden');
+      }
+      const ph = document.getElementById('profile-placeholder');
+      if (img.id === 'profile-display-img' && ph) {
+        ph.classList.remove('hidden');
+      }
+    }
+      }
+      if (img.dataset.step === '1') {
+        img.dataset.step = '2';
+        const parts = img.src.split('/');
+        const filename = parts[parts.length - 1];
+        img.src = filename;
+        return;
+      }
+      img.classList.add('hidden');
+      if (img.nextElementSibling && img.nextElementSibling.classList.contains('placeholder')) {
+        img.nextElementSibling.classList.remove('hidden');
+      }
+      const ph = document.getElementById('profile-placeholder');
+      if (img.id === 'profile-display-img' && ph) {
+        ph.classList.remove('hidden');
+      }
+    }
+
+    // Open lightbox when clicking any card
+    function handleCardClick(figId) {
+      const img = document.getElementById(figId);
+      if (img && img.src && !img.classList.contains('hidden')) {
+        openLightbox(img.src, img.alt);
+      }
+    }
+
+    function openLightbox(src, caption) {
+      const modal = document.getElementById('lightbox-modal');
+      const lightImg = document.getElementById('lightbox-img');
+      const lightCap = document.getElementById('lightbox-caption');
+      if (modal && lightImg && lightCap) {
+        lightImg.src = src;
+        lightCap.innerText = caption;
+        modal.classList.remove('hidden');
+      }
+    }
+
+    function closeLightbox() {
+      const modal = document.getElementById('lightbox-modal');
+      if (modal) modal.classList.add('hidden');
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeLightbox();
+    });
+  </script>
+</body>
+</html>
